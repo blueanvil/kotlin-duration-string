@@ -32,6 +32,7 @@ Duration.ofDays(16).toHumanReadableString()
   * Time units constrained to 24/60/60/1000: `24d 3h 45m 56s 345ms`
   * Time units unconstrained but only one unit allowed: `1034h` or `837429ms`
 #### Examples
+_For more examples see [DurationParseTest.kt](https://github.com/blueanvil/kotlin-duration-string/blob/master/src/test/kotlin/com/blueanvil/durationstr/DurationParseTest.kt)_
 ```kotlin
 "16d 4h 35s 782ms".toDuration()
 "16d 04h 035s 0782ms".toDuration()
