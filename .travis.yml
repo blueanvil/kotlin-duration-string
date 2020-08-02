@@ -1,4 +1,4 @@
 language: java
 after_success:
-  - gradle coveralls
+  - bash <(curl -s https://codecov.io/bash)
 

@@ -28,12 +28,4 @@ fun Duration.toHumanReadableString(): String {
     val start = elements.indexOfFirst { it[0] != '0' }
     val end = elements.indexOfLast { it[0] != '0' }
     return elements.subList(start, end + 1).joinToString(" ")
-
-//    return "${days}d ${hours}h ${minutes}m ${seconds}s ${milliseconds}ms"
-//            .replace("\\s0ms".toRegex(), "")
-//            .replace("\\s0s".toRegex(), "")
-//            .replace("\\s0m".toRegex(), "")
-//            .replace("\\s0h".toRegex(), "")
-//            .replace("^0d".toRegex(), "")
-//            .trim()
 }
