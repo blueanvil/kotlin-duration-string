@@ -94,6 +94,8 @@ class DurationParseTest {
         assertEquals("489ms".toDuration(), Duration.ofMillis(489))
         assertEquals("324489ms".toDuration(), Duration.ofMillis(324489))
 
+        assertEquals("12h 0m 3s".toDuration(), Duration.ofHours(12).plus(Duration.ofSeconds(3)))
+        assertEquals("12h 3s".toDuration(), Duration.ofHours(12).plus(Duration.ofSeconds(3)))
         assertEquals("16d 4h".toDuration(), Duration.ofDays(16).plus(Duration.ofHours(4)))
         assertEquals("16d 04h".toDuration(), Duration.ofDays(16).plus(Duration.ofHours(4)))
         assertEquals("16d 4h 35s".toDuration(), Duration.ofDays(16).plus(Duration.ofHours(4)).plus(Duration.ofSeconds(35)))

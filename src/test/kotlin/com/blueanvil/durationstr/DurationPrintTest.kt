@@ -45,6 +45,8 @@ class DurationPrintTest {
                 "16d 0h 0m 12s 345ms")
         assertEquals(Duration.ofDays(16).plus(Duration.ofMillis(345)).toHumanReadableString(),
                 "16d 0h 0m 0s 345ms")
+        assertEquals(Duration.ofHours(16).plus(Duration.ofSeconds(27)).toHumanReadableString(),
+                "16h 0m 27s")
     }
 
     @Test
