@@ -12,7 +12,7 @@ repositories {
 ```
 ```
 dependencies {
-    implementation 'com.github.blueanvil:koltin-duration-string:1.0'
+    implementation 'com.github.blueanvil:kotlin-duration-string:1.0'
 }
 ```
 
