@@ -17,7 +17,48 @@ dependencies {
 }
 ```
 
-# Usage
+# Features
+The tool is designed as two Kotlin extension functions for parsing and formatting respectively.
+
+The precision of both operations goes from days down to milliseconds. For example `24d 3h 45m 56s 345ms`.
+```
+"16d 4h 35s 782ms".toDuration()
+...
+Duration.ofDays(16).toHumanReadableString()
+```
+## Parsing
+* Converts a human readable format like `5h 30m` to a Java `Duration` object
+* Accepts two types of text:
+  * Time units constrained to 24/60/60/1000: `24d 3h 45m 56s 345ms`
+  * Time units unconstrained but only one unit allowed: `1034h` or `837429ms`
+#### Examples
+```kotlin
+"16d 4h 35s 782ms".toDuration()
+"16d 04h 035s 0782ms".toDuration()
+"56m 13s 923ms".toDuration()
+"12h 0m 3s".toDuration()
+"12h 3s".toDuration()
+
+"94h".toDuration()
+"324489ms".toDuration()
+```
+
+## Printing
+* Skips `0s` at the beginning and end of the String: you will get `16h 0m 27s`, not `0d 16h 0m 27s 0ms`
+* Prints the output in the 24/60/60/1000 constrained format
+#### Examples
+```kotlin
+// "16d"
+Duration.ofDays(16) 
+
+// "16d 23h 45m"
+Duration.ofDays(16).plus(Duration.ofHours(23)).plus(Duration.ofMinutes(45))
+
+// "16d 0h 0m 12s 345ms"
+Duration.ofDays(16).plus(Duration.ofSeconds(12).plus(Duration.ofMillis(345))).toHumanReadableString()
+```
+
+
 
 # License Information
 * The code is licensed under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
