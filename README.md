@@ -1,7 +1,7 @@
-# Tekst
+# kotlin-duration-string
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Build Status](https://travis-ci.com/blueanvil/tekst.svg?branch=master)](https://travis-ci.com/blueanvil/tekst)
-[![Coverage Status](https://coveralls.io/repos/github/blueanvil/tekst/badge.svg?branch=master)](https://coveralls.io/github/blueanvil/tekst?branch=master)
+[![Build Status](https://travis-ci.com/blueanvil/kotlin-duration-string.svg?branch=master)](https://travis-ci.com/blueanvil/kotlin-duration-string)
+[![Coverage Status](https://coveralls.io/repos/github/blueanvil/kotlin-duration-string/badge.svg?branch=master)](https://coveralls.io/github/blueanvil/kotlin-duration-string?branch=master)
 
 A tiny Kotlin library for dealing with human-readable duration strings like `2h 45m 50s`
 
