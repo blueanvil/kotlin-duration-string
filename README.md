@@ -44,8 +44,8 @@ _For more examples see [DurationParseTest.kt](https://github.com/blueanvil/kotli
 ```
 
 ## Printing
-* Skips `0s` at the beginning and end of the String: you will get `16h 0m 27s`, not `0d 16h 0m 27s 0ms`
-* Prints the output in the 24/60/60/1000 constrained format
+* Skips units which are `0` at the beginning and end of the String: you will get `16h 0m 27s`, not `0d 16h 0m 27s 0ms`
+* Only prints the output in the 24/60/60/1000 constrained format
 #### Examples
 ```kotlin
 // "16d"
