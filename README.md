@@ -22,7 +22,6 @@ The tool is designed as two Kotlin extension functions for parsing and formattin
 The precision of both operations goes from days down to milliseconds. For example `24d 3h 45m 56s 345ms`.
 ```
 "16d 4h 35s 782ms".toDuration()
-...
 Duration.ofDays(16).toHumanReadableString()
 ```
 ## Parsing
