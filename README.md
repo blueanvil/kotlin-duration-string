@@ -48,13 +48,19 @@ _For more examples see [DurationParseTest.kt](https://github.com/blueanvil/kotli
 #### Examples
 ```kotlin
 // "16d"
-Duration.ofDays(16) 
+Duration.ofDays(16)
+    .toHumanReadableString() 
 
 // "16d 23h 45m"
-Duration.ofDays(16).plus(Duration.ofHours(23)).plus(Duration.ofMinutes(45))
+Duration.ofDays(16)
+    .plus(Duration.ofHours(23))
+    .plus(Duration.ofMinutes(45))
+    .toHumanReadableString()
 
 // "16d 0h 0m 12s 345ms"
-Duration.ofDays(16).plus(Duration.ofSeconds(12).plus(Duration.ofMillis(345))).toHumanReadableString()
+Duration.ofDays(16)
+    .plus(Duration.ofSeconds(12).plus(Duration.ofMillis(345)))
+    .toHumanReadableString()
 ```
 
 # License Information
