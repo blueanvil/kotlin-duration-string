@@ -27,8 +27,8 @@ Duration.ofDays(16).toHumanReadableString()
 ## Parsing
 * Converts a human readable format like `5h 30m` to a Java `Duration` object
 * Accepts two types of text:
-  * Time units constrained to 24/60/60/1000: `24d 3h 45m 56s 345ms`
-  * Time units unconstrained but only one unit allowed: `1034h` or `837429ms`
+  * Time units are constrained to 24/60/60/1000: `24d 3h 45m 56s 345ms`
+  * Time units are unconstrained, but only one unit is allowed: `1034h` or `837429ms`
 #### Examples
 _For more examples see [DurationParseTest.kt](https://github.com/blueanvil/kotlin-duration-string/blob/master/src/test/kotlin/com/blueanvil/durationstr/DurationParseTest.kt)_
 ```kotlin
